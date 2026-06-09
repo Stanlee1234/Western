@@ -37,12 +37,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(10, 5)
+
 [node name="Player" type="CharacterBody2D" unique_id=1383118547]
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=689691062]
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.7325633
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=417491932]
 zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=104535135]
+position = Vector2(1, 9.5)
+shape = SubResource("RectangleShape2D_cvnsp")
