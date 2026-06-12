@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://c1d4mlb0vtme4"]
+
+[ext_resource type="Script" uid="uid://by61g631n3bgc" path="res://Scripts/weapon_data.gd" id="1_7j71y"]
+[ext_resource type="Texture2D" uid="uid://vwu1lpa5gl6i" path="res://Assets/PNG/Weapons/Tiles/tile_0000.png" id="2_56pew"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7304d"]
+atlas = ExtResource("2_56pew")
+region = Rect2(7, 8, 11, 8)
+
+[resource]
+script = ExtResource("1_7j71y")
+texture = SubResource("AtlasTexture_7304d")
+player_distance = 15.0
+barrel_position = Vector2(7, 3)
+metadata/_custom_type_script = "uid://by61g631n3bgc"
