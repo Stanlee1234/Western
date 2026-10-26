@@ -10,6 +10,6 @@ region = Rect2(7, 8, 11, 8)
 [resource]
 script = ExtResource("1_7j71y")
 texture = SubResource("AtlasTexture_7304d")
-player_distance = 15.0
+player_distance = 12.0
 barrel_position = Vector2(7, 3)
 metadata/_custom_type_script = "uid://by61g631n3bgc"

@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var gun = $Gun
 @onready var gun_sprite = $Gun/Sprite2D
+@onready var camera = $Camera2D
+@onready var shoot_sound = $ShootSound
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -79,3 +81,6 @@ func shoot() -> void:
 	get_tree().current_scene.add_child(bullet)
 	bullet.global_position = spawn_point
 	bullet.global_rotation = gun.global_rotation
+	shoot_sound.pitch_scale = randf_range(0.9, 1.1)
+	shoot_sound.play()
+	camera.add_trauma(0.5)
